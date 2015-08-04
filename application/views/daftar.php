@@ -51,45 +51,21 @@
             <!-- Main -->
             <div class="wrapper style1">
 
-                <div class="container">
-                    <h3><?php echo $error;?></h3>
+                <div class="container">                    
+                    <h3><?php echo $error; ?></h3>
                     <br>
                     <article id="main" class="special">
-                        <form action="<?php echo base_url() . 'c_master/add_article'; ?>" method="post" enctype="multipart/form-data">
-                            <label>Story Title</label>
-                            <input type="text" name="judul" placeholder="Ex : How to Make Fire from Ammonia" autofocus/>
-                            <label>Category</label>
-                            <select name="kategori" class="form-control">
-                                <option value="">--</option>
-                                <?php foreach ($category as $cat) { ?>
-                                    <option value="<?php echo $cat->id_cat; ?>"><?php echo $cat->nm_cat; ?></option>
-                                <?php } ?>
-                            </select>
+                        <form action="<?php echo base_url() . 'c_master/daftar'; ?>" method="post">
+                            <label>Nama Lengkap</label>
+                            <input type="text" name="nama" placeholder="" autofocus required/>
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="" required/>
+                            <label>Password</label>
+                            <input type="password" name="pass" placeholder="" required/>
+                            <label>Retype Password</label>
+                            <input type="password" name="repass" placeholder="" required/>
                             <br>
-                            <textarea id="editor1" name="editor1"></textarea>
-                            <br>
-                            <button class="btn btn-primary form-control" data-toggle="modal" data-target="#myModal">Select Featured Image</button>
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">Select Your Featured Image</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <select name="fi" id="fi">
-                                                <?php foreach ($feat_im as $fi) { ?>
-                                                    <option data-img-src="<?php echo base_url() . 'images/' . $fi->nama; ?>" value="<?php echo $fi->id_feat_im; ?>"><?php echo $fi->nama; ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                            <button class="btn btn-primary" type="submit">Post My Story</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <button class="btn btn-primary" type="submit">Register</button>
                         </form>
                     </article>
                 </div>

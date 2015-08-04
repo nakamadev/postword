@@ -6,39 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/main.css'; ?>" />
+        <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/jquery.sidr.light.css'; ?>" />
 
     </head>
     <body class="left-sidebar">
         <div id="page-wrapper">
 
             <!-- Header -->
-            <div id="header" style="background-image: url('<?php echo base_url() . 'images/' . $fi->nama; ?>');">
-
-                <!-- Inner -->
-                <div class="inner">
-                    <header>
-                        <h1><a href="<?php echo base_url(); ?>" id="logo">Postword</a></h1>
-                    </header>
-                </div>
-
-                <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a href="<?php echo base_url(); ?>">Home</a></li>
-                        <li><a href="<?php echo base_url() . 'c_master/change/writepost'; ?>">Write a Story</a></li>
-                        <li><a href="#">Sign Up</a></li>
-                        <li>
-                            <a href="#">Category</a>
-                            <ul>
-                                <?php foreach ($category as $cat) { ?>
-                                    <li><a href="<?php echo base_url() . 'c_master/change/' . $cat->id_cat; ?>"><?php echo $cat->nm_cat . '<strong> ' . $cat->jum . '</strong>'; ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-            </div>
+            <?php $this->load->view('mnheader'); ?>
 
             <!-- Main -->
             <div class="wrapper style1">
@@ -273,6 +248,12 @@
         <script src="<?php echo base_url() . 'assets/js/util.js'; ?>"></script>
 
         <script src="<?php echo base_url() . 'assets/js/main.js'; ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/jquery.sidr.min.js'; ?>"></script>
+        <script>
+            $(document).ready(function() {
+                $('#simple-menu').sidr();
+            });
+        </script>
 
     </body>
 </html>

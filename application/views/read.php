@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/main.css'; ?>" />
+        <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/jquery.sidr.light.css'; ?>" />
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     </head>
     <body class="no-sidebar">
@@ -17,8 +18,13 @@
                 <!-- Inner -->
                 <div class="inner">
                     <header>
-                        <h1><a href="<?php echo base_url(); ?>" id="logo"><?php echo $story->nm_cat; ?></a></h1>
+                        <h1><a href="<?php echo base_url(); ?>" id="logo">Postword</a></h1>
+                        <hr />
+                        <p>Place for Startup Writers</p>
                     </header>
+                    <footer>
+                        <a href="#main" class="button circled scrolly">Let's Go</a>
+                    </footer>
                 </div>
 
                 <!-- Nav -->
@@ -27,17 +33,19 @@
                         <li><a href="<?php echo base_url(); ?>">Home</a></li>
                         <li><a href="<?php echo base_url() . 'c_master/change/writepost'; ?>">Write a Story</a></li>
                         <li><a href="#">Sign Up</a></li>
-                        <li>
-                            <a href="#">Category</a>
-                            <ul>
-                                <?php foreach ($category as $cat) { ?>
-                                    <li><a href="<?php echo base_url() . 'c_master/change/' . $cat->id_cat; ?>"><?php echo $cat->nm_cat . '<strong> ' . $cat->jum . '</strong>'; ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </li>
+                        <li><a id="simple-menu" href="#sidr">Category</a></li>
                     </ul>
                 </nav>
 
+            </div>
+
+            <div id="sidr">
+                <!-- Your content -->
+                <ul>
+                    <?php foreach ($category as $cat) { ?>
+                        <li><a href="<?php echo base_url() . 'c_master/change/' . $cat->id_cat; ?>"><?php echo $cat->nm_cat . '<strong> ' . $cat->jum . '</strong>'; ?></a></li>
+                    <?php } ?>
+                </ul>
             </div>
 
             <!-- Main -->
@@ -238,6 +246,12 @@
         <script src="<?php echo base_url() . 'assets/js/util.js'; ?>"></script>
 
         <script src="<?php echo base_url() . 'assets/js/main.js'; ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/jquery.sidr.min.js'; ?>"></script>
+        <script>
+            $(document).ready(function() {
+                $('#simple-menu').sidr();
+            });
+        </script>
 
     </body>
 </html>

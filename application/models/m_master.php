@@ -10,6 +10,15 @@ class m_master extends CI_Model {
             return TRUE;
         }
     }
+    
+    function login_user() {
+        $this->db->where('email', $this->input->post('email'));
+        $this->db->where('pass', md5($this->input->post('password')));
+        $query = $this->db->get('user');
+        if ($query->num_rows() == 1) {
+            return TRUE;
+        }
+    }
 
     function get_cat() {
         $cat = $this->db->get('category');
@@ -127,7 +136,7 @@ class m_master extends CI_Model {
     function add_article() {
         $ins_story = array(
             'judul' => $this->input->post('judul'),
-            'id_feat_im' => '1',
+            'id_feat_im' => $this->input->post('fi'),
             'isi' => $this->input->post('editor1'),
             'tgl_post' => date('d-m-Y'),
             'id_cat' => $this->input->post('kategori')
@@ -135,19 +144,47 @@ class m_master extends CI_Model {
         $insert = $this->db->insert('artikel', $ins_story);
 
         $id_cat = $this->input->post('kategori');
+        $fi = $this->input->post('fi');
 
         $this->db->select('jum');
         $this->db->where('id_cat', $id_cat);
-        $jum = $this->db->get('category');
+        $jum = $this->db->get('category')->row();
 
-        $data = array(
-            'jum' => $jum + 1
+        $jml = $jum->jum + 1;
+
+        $sql = "Update category set jum = $jml where id_cat = $id_cat";
+        $update = $this->db->query($sql);
+
+        $sql2 = "Update featured_image set status = 'used' where id_feat_im = $fi";
+        $update2 = $this->db->query($sql2);
+
+        if ($insert && $update && $update2) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+    function cekemail($email) {
+        $this->db->select('email');
+        $this->db->where('email', $email);
+        $query = $this->db->get('user');
+        if ($query->num_rows() != 0) {
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
+
+    function daftar() {
+        $ins_user = array(
+            'email' => $this->input->post('email'),
+            'nama' => $this->input->post('nama'),
+            'pass' => md5($this->input->post('pass'))
         );
+        $insert = $this->db->insert('user', $ins_user);
 
-        $this->db->where('id_cat', $id_cat);
-        $update = $this->db->update('category', $data);
-
-        if ($insert && $update) {
+        if ($insert) {
             return TRUE;
         } else {
             return FALSE;
