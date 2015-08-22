@@ -1,15 +1,4 @@
-<div id="headerback" style="background-image: url('<?php echo base_url() . 'images/' . $fi->nama; ?>');
-     left:10;
-     right:10;
-     -webkit-filter: blur(5px);
-     -moz-filter: blur(5px);
-     -o-filter: blur(5px);
-     -ms-filter: blur(5px);
-     filter: blur(5px);
-     z-index: 1;">
-</div>
-
-<div id="header">
+<div id="header" style="background-image: url('<?php echo base_url() . 'images/' . $fi->nama; ?>');">
     <!-- Inner -->
     <div class="inner">
         <header>

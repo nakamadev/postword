@@ -26,7 +26,7 @@ class c_master extends CI_Controller {
     }
 
     function login_user() {
-        $this->form_validation->set_rules('email', 'User Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email Address', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
         $query = $this->m_master->login_user();
