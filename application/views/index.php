@@ -120,49 +120,6 @@
                             </ul>
                         </section>
 
-                        <!-- Posts -->
-                        <section class="4u 12u(mobile)">
-                            <header>
-                                <h2 class="icon fa-file circled"><span class="label">Posts</span></h2>
-                            </header>
-                            <ul class="divided">
-                                <li>
-                                    <article class="post stub">
-                                        <header>
-                                            <h3><a href="#">5 Ways the Internet Is Helping You Fight Against Anxiety</a></h3>
-                                        </header>
-                                        <span class="timestamp">3 hours ago</span>
-                                    </article>
-                                </li>
-<<<<<<< HEAD
-=======
-                                <li>
-                                    <article class="post stub">
-                                        <header>
-                                            <h3><a href="#">Bake the Best Chocolate Chip Cookies by Knowing What to Tweak</a></h3>
-                                        </header>
-                                        <span class="timestamp">6 hours ago</span>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article class="post stub">
-                                        <header>
-                                            <h3><a href="#">3 Steps To Easy Meal Planning For Busy People (With A Quick Recipe!)</a></h3>
-                                        </header>
-                                        <span class="timestamp">Yesterday</span>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article class="post stub">
-                                        <header>
-                                            <h3><a href="#">NASA's Kepler Discovers First Earth-Size Planet In The 'Habitable Zone' of Another Star</a></h3>
-                                        </header>
-                                        <span class="timestamp">2 days ago</span>
-                                    </article>
-                                </li>
->>>>>>> dc90ee5e99560bfb6de3918fd4799e1be92348cf
-                            </ul>
-                        </section>
 
                         <!-- Photos -->
                         <section class="4u 12u(mobile)">
