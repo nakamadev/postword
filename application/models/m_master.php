@@ -48,7 +48,7 @@ class m_master extends CI_Model {
     }
 
     function get_fi_header_story($view) {
-        $query = "select b.nama from artikel a, featured_image b, category c
+         $query = "select b.nama from artikel a, featured_image b, category c
                 where b.id_feat_im = a.id_feat_im and a.id_cat = c.id_cat and a.clicked = (select max(clicked) from artikel where id_cat = $view) and a.id_cat = '$view'";
         $exec = $this->db->query($query);
         if ($exec->num_rows() == 1) {
@@ -121,6 +121,7 @@ class m_master extends CI_Model {
             }
         }
     }
+
 
     function getuserartikel() {
         $this->db->select('a.id_artikel,a.judul,a.tgl_post,a.isi,b.nm_cat');
@@ -214,7 +215,7 @@ class m_master extends CI_Model {
     }
 
     function read($id) {
-        $this->db->select('clicked');
+      $this->db->select('clicked');
         $this->db->where('id_artikel', $id);
         $jumclick = $this->db->get('artikel')->row();
 

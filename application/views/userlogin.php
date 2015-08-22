@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -38,5 +39,3 @@
         <!-- Scripts -->
         <script src="<?php echo base_url() . 'assets/js/event.js'; ?>"></script>
 
-    </body>
-</html>

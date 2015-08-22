@@ -13,7 +13,11 @@
         <div id="page-wrapper">
 
             <!-- Header -->
+
             <?php $this->load->view('mnheader') ?>
+
+
+
 
             <!-- Main -->
             <div class="wrapper style2">
@@ -24,6 +28,7 @@
                         <header>
                             <h2><a href="#">Story of The Day</a></h2>
                             <p>
+
                                 <?php echo $fi->judul; ?>
                             </p>
                         </header>
@@ -32,6 +37,16 @@
                         </p>
                         <footer>
                             <a href="<?php echo base_url() . 'c_master/read/' . $fi->id_artikel; ?>" class="button">Continue Reading</a>
+
+                           
+                        
+                        </header>
+                        <p>
+                            <?php echo substr($fi->isi, 0, 900) . ' ...'; ?>
+                        </p>
+                        <footer>
+                            <a href="#" class="button">Continue Reading</a>
+
                         </footer>
                     </article>
 
@@ -119,6 +134,33 @@
                                         <span class="timestamp">3 hours ago</span>
                                     </article>
                                 </li>
+<<<<<<< HEAD
+=======
+                                <li>
+                                    <article class="post stub">
+                                        <header>
+                                            <h3><a href="#">Bake the Best Chocolate Chip Cookies by Knowing What to Tweak</a></h3>
+                                        </header>
+                                        <span class="timestamp">6 hours ago</span>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article class="post stub">
+                                        <header>
+                                            <h3><a href="#">3 Steps To Easy Meal Planning For Busy People (With A Quick Recipe!)</a></h3>
+                                        </header>
+                                        <span class="timestamp">Yesterday</span>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article class="post stub">
+                                        <header>
+                                            <h3><a href="#">NASA's Kepler Discovers First Earth-Size Planet In The 'Habitable Zone' of Another Star</a></h3>
+                                        </header>
+                                        <span class="timestamp">2 days ago</span>
+                                    </article>
+                                </li>
+>>>>>>> dc90ee5e99560bfb6de3918fd4799e1be92348cf
                             </ul>
                         </section>
 

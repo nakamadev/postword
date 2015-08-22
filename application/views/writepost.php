@@ -33,6 +33,8 @@
                         <?php } else { ?>
                             <li><a href="<?php echo base_url() . 'c_master/user_out'; ?>">Sign Out</a></li>
                             <li><a href="<?php echo base_url() . 'c_master/getuserartikel'; ?>">See What You've Share</a></li>
+
+
                         <?php } ?>
                         <li><a id="simple-menu" href="#sidr">Category</a></li>
                     </ul>
@@ -54,6 +56,8 @@
 
                 <div class="container">
                     <h3><?php echo $error; ?></h3>
+
+
                     <br>
                     <article id="main" class="special">
                         <form action="<?php echo base_url() . 'c_master/add_article'; ?>" method="post" enctype="multipart/form-data">
@@ -68,6 +72,8 @@
                             </select>
                             <br>
                             <label>Write Your Story</label>
+
+
                             <textarea id="editor1" name="editor1"></textarea>
                             <br>
                             <button class="btn btn-primary form-control" data-toggle="modal" data-target="#myModal">Select Featured Image</button>

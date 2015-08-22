@@ -1,4 +1,5 @@
 <div id="header" style="background-image: url('<?php echo base_url() . 'images/' . $fi->nama; ?>');">
+
     <!-- Inner -->
     <div class="inner">
         <header>
@@ -25,6 +26,7 @@
             <li><a id="simple-menu" href="#sidr">Category</a></li>
         </ul>
     </nav>
+
 </div>
 
 <div id="sidr">
