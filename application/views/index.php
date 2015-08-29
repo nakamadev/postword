@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Postword</title>
+        <title>POSTWORD | Everyone Can Post the Word</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -15,9 +15,6 @@
             <!-- Header -->
 
             <?php $this->load->view('mnheader') ?>
-
-
-
 
             <!-- Main -->
             <div class="wrapper style2">
@@ -37,16 +34,6 @@
                         </p>
                         <footer>
                             <a href="<?php echo base_url() . 'c_master/read/' . $fi->id_artikel; ?>" class="button">Continue Reading</a>
-
-                           
-                        
-                        </header>
-                        <p>
-                            <?php echo substr($fi->isi, 0, 900) . ' ...'; ?>
-                        </p>
-                        <footer>
-                            <a href="#" class="button">Continue Reading</a>
-
                         </footer>
                     </article>
 
@@ -83,116 +70,7 @@
             </section>
 
             <!-- Footer -->
-            <div id="footer">
-                <div class="container">
-                    <div class="row">
-
-                        <!-- Tweets -->
-                        <section class="4u 12u(mobile)">
-                            <header>
-                                <h2 class="icon fa-twitter circled"><span class="label">Tweets</span></h2>
-                            </header>
-                            <ul class="divided">
-                                <li>
-                                    <article class="tweet">
-                                        Amet nullam fringilla nibh nulla convallis tique ante sociis accumsan.
-                                        <span class="timestamp">5 minutes ago</span>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article class="tweet">
-                                        Hendrerit rutrum quisque.
-                                        <span class="timestamp">30 minutes ago</span>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article class="tweet">
-                                        Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
-                                        <span class="timestamp">3 hours ago</span>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article class="tweet">
-                                        Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
-                                        <span class="timestamp">5 hours ago</span>
-                                    </article>
-                                </li>
-                            </ul>
-                        </section>
-
-
-                        <!-- Photos -->
-                        <section class="4u 12u(mobile)">
-                            <header>
-                                <h2 class="icon fa-camera circled"><span class="label">Photos</span></h2>
-                            </header>
-                            <div class="row 25%">
-                                <div class="6u">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/a.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u$">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/b.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/c.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u$">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/d.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/e.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u$">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/f.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/g.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u$">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/h.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/i.jpg" alt="" /></a>
-                                </div>
-                                <div class="6u$">
-                                    <a href="#" class="image fit"><img src="<?php echo base_url(); ?>images/j.jpg" alt="" /></a>
-                                </div>
-                            </div>
-                        </section>
-
-                    </div>
-                    <hr />
-                    <div class="row">
-                        <div class="12u">
-
-                            <!-- Contact -->
-                            <section class="contact">
-                                <header>
-                                    <h3>Wanna know more about us ?</h3>
-                                </header>
-                                <p>Visit our backlink to see incredible work we've been doing</p>
-                                <ul class="icons">
-                                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                                    <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-                                    <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-                                    <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-                                </ul>
-                            </section>
-
-                            <!-- Copyright -->
-                            <div class="copyright">
-                                <ul class="menu">
-                                    <li>&copy; Postword. All rights reserved.</li><li>Design: <a href="http://html5up.net">Nakama</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            <?php $this->load->view('footer');?>
 
         </div>
 
@@ -208,7 +86,9 @@
         <script src="<?php echo base_url() . 'assets/js/jquery.sidr.min.js'; ?>"></script>
         <script>
             $(document).ready(function() {
-                $('#simple-menu').sidr();
+                $('#right-menu').sidr({
+                    side: 'right'
+                });
             });
         </script>
 

@@ -187,7 +187,9 @@ class m_master extends CI_Model {
             $this->db->update('category', $upd_jumcat);
         }
 
-        if ($this->db->update('artikel', $upd_art)) {
+        $this->db->where('id_artikel', $id_artikel);
+        $upd_artikel = $this->db->update('artikel', $upd_art);
+        if ($upd_artikel) {
             return TRUE;
         } else {
             return FALSE;
@@ -241,6 +243,7 @@ class m_master extends CI_Model {
             'id_feat_im' => $this->input->post('fi'),
             'isi' => $this->input->post('editor1'),
             'tgl_post' => date('d-m-Y'),
+            'wkt_post' => date('H:m:s'),
             'email' => $this->session->userdata('email'),
             'id_cat' => $this->input->post('kategori')
         );
@@ -292,6 +295,16 @@ class m_master extends CI_Model {
         } else {
             return FALSE;
         }
+    }
+    
+    function latest_foot(){
+        $datenow = date('d');
+        $monthnow = date('m');
+        $yearnow = date('Y');
+        
+        $this->db->select('tgl_post,wkt_post');
+        $art = $this->db->get('artikel')->result();
+        
     }
 
 }

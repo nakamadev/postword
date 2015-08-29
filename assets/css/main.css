@@ -1,4 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,400italic,500italic,500,300);
 @import url("font-awesome.min.css");
 
 
@@ -1550,7 +1551,7 @@ body {
     color: #5b5b5b;
     font-size: 15pt;
     line-height: 1.85em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     font-weight: 300;
 }
 
@@ -1568,7 +1569,7 @@ body.is-loading *, body.is-loading *:after, body.is-loading *:before {
 input, textarea, select {
     font-size: 15pt;
     line-height: 1.85em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     font-weight: 300;
 }
 
