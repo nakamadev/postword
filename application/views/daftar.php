@@ -29,7 +29,6 @@
                         <li><a href="<?php echo base_url(); ?>">Home</a></li>
                         <li><a href="<?php echo base_url() . 'c_master/change/writepost'; ?>">Write a Story</a></li>
                         <?php if ($this->session->userdata('user_logged_in') == FALSE) { ?>
-                            <li><a href="<?php echo base_url() . 'c_master/change/daftar'; ?>">Sign Up</a></li>
                         <?php } else { ?>
                             <li><a href="<?php echo base_url() . 'c_master/user_out'; ?>">Sign Out</a></li>
                         <?php } ?>
