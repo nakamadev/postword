@@ -12,7 +12,7 @@
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     </head>
     <body class="no-sidebar">
-        <div id="page-wrapper">
+        <div id="page-wrapper"> 
 
             <!-- Header -->
             <div id="header" style="background-image: url('<?php echo base_url() . 'images/a.jpg'; ?>');">
@@ -71,7 +71,7 @@
             </div>
 
             <!-- Footer -->
-            <?php $this->load->view('minifooter');?>
+            <?php $this->load->view('minifooter'); ?>
 
 
         </div>
